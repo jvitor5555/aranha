@@ -18,17 +18,26 @@ body{
     padding: 30px;
 }
 
-.inicio h1{
-    color: darkblue;
-    font-family: "Roboto", serif;
-    font-size: 40px;
+.inicio a{
+    text-decoration: none; 
+    display: inline-block; 
+    padding: 15px 30px; 
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 16px; 
+    border-radius: 8px; 
+    text-align: center; 
+    transition: background-color 0.3s, transform 0.3s; 
     letter-spacing: 3px;
-    cursor: pointer;
+    font-family: "Roboto", sans-serif;
 }
 
-.inicio h1:hover{
-    color: red;
+.inicio a:hover{
+    background-color: #45a049; 
+    transform: translateY(-3px); 
+    border: 2px solid black;
 }
+
 
 .container{
     display: flex;
@@ -95,7 +104,7 @@ body{
 }
 
 .cafe:hover{
-    animation: flip 3s ease-in-out;
+    animation: flip 4s ease-in-out;
     cursor: pointer;
 }
 
@@ -127,300 +136,3 @@ body{
     0% { transform: rotateY(0deg); }
     100% { transform: rotateY(180deg); }
 }
-
-:root{
-    --CorLetra: rgb(87,87,87);
-    --CorPurpura: #9800ce    ;
-    --CorVermelha: #ff0000;
-    --corverde: green;
-    --coramarelo: yellow;
-    --corlaranja: orange;
-    --corazul: rgb(68, 0, 255);
-}
-
-.mensagem{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    gap: 60px;
-    font-size: 45px;
-}
-
-.giulia{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.giulia span { 
-    animation-name: brilhando;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    letter-spacing: 15px;
-    cursor: pointer;
-}
-
-.giulia span:nth-of-type(2) {
-    animation-delay: 0.25s;
-}
-
-.giulia span:nth-of-type(3) {
-    animation-delay: 0.50s;
-}
-
-.giulia span:nth-of-type(4) {
-    animation-delay: 0.75s;
-}
-
-.giulia span:nth-of-type(5) {
-    animation-delay: 1s;
-}
-
-.giulia span:nth-of-type(6) {
-    animation-delay: 1.25s;
-}
-
-.giulia span:nth-of-type(7) {
-    animation-delay: 1.50s;
-}
-
-.giulia span:nth-of-type(8) {
-    animation-delay: 1.75s;
-}
-
-.giulia span:nth-of-type(9) {
-    animation-delay: 2s;
-}
-
-.giulia span:nth-of-type(10) {
-    animation-delay: 2.25s;
-}
-
-
-@keyframes brilhando{
-
-    0%{
-        color: red;
-        text-shadow: 0 0 12px var(--CorVermelha),
-        0 0 50px var(--CorVermelha),
-        0 0 10px var(--CorVermelha);
-    }
-
-    10%, 90% {
-        color: var(--CorLetra);
-        text-shadow: none;
-    }
-}
-
-.sorria span {
-    animation-name: brilhar;
-    animation-duration: 8s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    cursor: pointer;
-    letter-spacing: 10px;
-    transition: 2s;
-}
-
-.sorria span:nth-of-type(2) {
-    animation-delay: 0.25s;
-}
-
-.sorria span:nth-of-type(3) {
-    animation-delay: 0.50s;
-}
-
-.sorria span:nth-of-type(4) {
-    animation-delay: 0.75s;
-}
-
-.sorria span:nth-of-type(5) {
-    animation-delay: 1s;
-}
-
-.sorria span:nth-of-type(6) {
-    animation-delay: 1.25s;
-}
-
-.sorria span:nth-of-type(7) {
-    animation-delay: 1.50s;
-}
-
-.sorria span:nth-of-type(8) {
-    animation-delay: 1.75s;
-}
-
-.sorria span:nth-of-type(9) {
-    animation-delay: 2s;
-}
-
-.sorria span:nth-of-type(10) {
-    animation-delay: 2.25s;
-}
-
-.sorria span:nth-of-type(11) {
-    animation-delay: 2.50s;
-}
-
-@keyframes brilhar{
-
-    0%{
-        color: white;
-        text-shadow: 0 0 12px var(--CorPurpura),
-        0 0 50px var(--CorPurpura),
-        0 0 10px var(--CorPurpura);
-    }
-
-    10%, 90% {
-        color: var(--CorLetra);
-        text-shadow: none;
-    }
-}
-
-
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.sorriso span { 
-    animation-name: brilhandoverde;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    letter-spacing: 15px;
-    cursor: pointer;
-}
-
-.sorriso span:nth-of-type(1) {
-    animation-delay: 3.25s;
-}
-
-.sorriso span:nth-of-type(2) {
-    animation-delay: 3.50s;
-}
-
-.sorriso span:nth-of-type(3) {
-    animation-delay: 3.75s;
-}
-
-.sorriso span:nth-of-type(4) {
-    animation-delay: 4s;
-}
-
-.sorriso span:nth-of-type(5) {
-    animation-delay: 4.25s;
-}
-
-.sorriso span:nth-of-type(6) {
-    animation-delay: 4.50s;
-}
-
-@keyframes brilhandoverde{
-
-    0%{
-        color: var(--corverde);
-        text-shadow: 0 0 12px var(--corverde),
-        0 0 50px var(--corverde),
-        0 0 10px var(--corverde);
-    }
-
-    10%, 90% {
-        color: var(--CorLetra);
-        text-shadow: none;
-    }
-}
-
-@keyframes brilhandoamarelo{
-
-    0%{
-        color: var(--coramarelo);
-        text-shadow: 0 0 12px var(--coramarelo),
-        0 0 50px var(--coramarelo),
-        0 0 10px var(--coramarelo);
-    }
-
-    10%, 90% {
-        color: var(--CorLetra);
-        text-shadow: none;
-    }
-}
-
-@keyframes brilhandolaranja{
-
-    0%{
-        color: var(--corlaranja);
-        text-shadow: 0 0 12px var(--corlaranja),
-        0 0 50px var(--corlaranja),
-        0 0 10px var(--corlaranja);
-    }
-
-    10%, 90% {
-        color: var(--CorLetra);
-        text-shadow: none;
-    }
-}
-
-.seu span { 
-    animation-name: brilhandolaranja;
-    animation-duration: 7s;
-    animation-timing-function: step-end;
-    animation-iteration-count: infinite;
-    letter-spacing: 15px;
-    cursor: pointer;
-}
-
-.seu span:nth-of-type(1) {
-    animation-delay: 0.25s;
-}
-
-.seu span:nth-of-type(2) {
-    animation-delay: 0.50s;
-}
-
-.seu span:nth-of-type(3) {
-    animation-delay: 0.75s;
-}
-
-.lindo span { 
-    animation-name: brilhandoamarelo;
-    animation-duration: 4.5s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    letter-spacing: 15px;
-    cursor: pointer;
-}
-
-.lindo span:nth-of-type(1) {
-    animation-delay: 0.25s;
-}
-
-.lindo span:nth-of-type(2) {
-    animation-delay: 0.50s;
-}
-
-.lindo span:nth-of-type(3) {
-    animation-delay: 0.75s;
-}
-.lindo span:nth-of-type(4) {
-    animation-delay: 1s;
-}
-
-.lindo span:nth-of-type(5) {
-    animation-delay: 1.25s;
-}
-
-.lindo span:nth-of-type(6) {
-    animation-delay: 1.50s;
-}
-
-.lindo span:nth-of-type(7) {
-    animation-delay: 1.75s;
-}
-
-
-
