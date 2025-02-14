@@ -6,26 +6,44 @@
     box-sizing: border-box;
 }
 
-body{    
-    height: 100vh;
-    padding: 160px 0;
-    background: linear-gradient(45deg, #00BFFF, #40E0D0, #20B2AA);
-}
-
 :root {
     --CorLetra: rgb(87, 87, 87);
     --CorPurpura: #9800ce;
     --CorVermelha: #ff0000;
 }
 
-.container1, .container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    font-size: 40px;
-    letter-spacing: 15px;
-    padding: 50px;
+body{
+    height: 100vh;
+    display: grid;    
+    background: linear-gradient(45deg, #00BFFF, #40E0D0, #20B2AA);
+    font-size: 100px;
+    justify-content: space-evenly;
+}
+
+.container1{
+
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.container1, .container2{
+
+    display: grid;
+}
+
+.final a{
+    font-size: 50px;
+    padding: 30px 50px;
+    border: 2px solid black;
+    text-decoration: none; 
+    display: inline-block;
+    background-color: rgb(255, 129, 129); 
+    color:white; 
+    border-radius: 8px; 
+    text-align: center; 
+    transition: background-color 0.3s, transform 0.3s; 
+    letter-spacing: 3px;
+    font-family: "Roboto", sans-serif;
 }
 
 .bloco1 span, .bloco2 span, .bloco3 span, .bloco4 span, .bloco5 span, .bloco6 span{
@@ -153,6 +171,7 @@ body{
         color: red;
         text-shadow: 0 0 12px var(--CorVermelha), 0 0 50px var(--CorVermelha), 0 0 10px var(--CorVermelha);
     }
+
     10%, 90% {
         color: var(--CorLetra);
         text-shadow: none;
@@ -178,32 +197,45 @@ body{
   }
 }
 
-.final{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media screen and (min-width: 1920px){
 
-.final a{
-    text-decoration: none; 
-    display: inline-block; 
-    padding: 15px 30px; 
-    background-color: #ff7d7d; 
-    color: white; 
-    font-size: 16px; 
-    border-radius: 8px; 
-    text-align: center; 
-    transition: background-color 0.3s, transform 0.3s; 
-    letter-spacing: 3px;
-    font-family: "Roboto", sans-serif;
-    position: relative;
-    top: 50px;
-    border: 1px solid black;
-    animation: aparecer infinite 3s ease;
-}
+    body{
 
-.final a:hover{
-    background-color: #ff0022; 
-    transform: translateY(-3px); 
-    border: 3px solid black;
+        display: grid;
+        gap: 50px;
+        font-size: 45px;
+    }
+
+    .container1, .container2{
+
+        display: flex;
+        gap: 50px;
+        letter-spacing: 15px;
+    }
+
+    .final{
+
+        text-align: center;
+    }
+
+    .final a{
+
+        font-size: 30px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: rgb(255, 129, 129);
+        color: white;
+        font-size: 30px;
+        border-radius: 8px;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s;
+        letter-spacing: 3px;
+        font-family: "Roboto", sans-serif;
+        animation: aparecer infinite 3s ease;
+        border: 1px solid black;
+        margin: 0px;
+    }
+
+
 }

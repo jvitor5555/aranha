@@ -1,0 +1,21 @@
+{
+  "name": "giulia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvitor5555/aranha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jvitor5555/aranha/issues"
+  },
+  "homepage": "https://github.com/jvitor5555/aranha#readme"
+}

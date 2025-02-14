@@ -6,115 +6,98 @@
     box-sizing: border-box;
 }
 
-body{    
+body {
+    display: grid;
+    place-items: center;
     height: 100vh;
-    padding: 100px 50px;
+    gap: 50px;
 }
 
-.inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+.inicio{
+    margin-top: 50px;
+    padding-top: 50px;
 }
 
-.inicio a{
+.inicio a {
+    font-size: 50px;
+    padding: 30px 50px;
+    border: 2px solid black;
     text-decoration: none; 
-    display: inline-block; 
-    padding: 15px 30px; 
+    display: inline-block;
     background-color: rgb(255, 129, 129); 
     color:white; 
-    font-size: 16px; 
     border-radius: 8px; 
     text-align: center; 
     transition: background-color 0.3s, transform 0.3s; 
     letter-spacing: 3px;
     font-family: "Roboto", sans-serif;
     animation: aparecer infinite 3s ease;
-    border: 1px solid black;
 }
 
 .inicio a:hover{
     background-color: blue; 
-    transform: translateY(-3px); 
-    border: 3px solid black;
+    transition: 3s;
 }
 
-
-.container{
+.container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 200px;
+    height: 80vh;
+    gap: 50px;
+    
 }
 
 .haranha{
+    width: 400px;
+    height: 400px;
     background-color: red;
     border-radius:50% ;
     border: 2px solid black;
-    height: 300px;
-    width: 300px;
+    margin-top: 50px;
 }
 
-.haranha:hover{
-
-    background-image: linear-gradient(rgb(62, 62, 247) ,rgb(33, 113, 198) ,rgb(119, 119, 206));
-}
-
-.haranha img{
+.haranha img {
     position: relative;
-    left: 55px;
     top: 30px;
+    left: 15px;
 }
 
-.haranha img:hover{
-    animation: bounce 3s infinite;
-    cursor: pointer;
-}
-
-
-.aranha{
-    background-color: rgb(28, 28, 255);
-    width: 240px;
+.haranha img, .cafe img{
+    width: 400px;
     height: 400px;
-    border: 10px black solid;
-}
-
-.aranha img{
-    position: relative;
-    right: 40px;
-    top: 65px;
-}
-
-.aranha:hover{
-    background-image: linear-gradient( rgb(255, 119, 119) , red, rgb(255, 83, 83));
-    
-}
-
-.aranha img:hover{
-    animation: ampliar 3s ease;
-    cursor: pointer;
-    
 }
 
 .cafe{
-    background-image: linear-gradient(yellow, orangered);
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     border: 3px orange solid;
+    background-image: linear-gradient(yellow, orangered);
+    margin-top: 50px;
 }
-
-.cafe:hover{
-    animation: flip 4s ease-in-out;
-    cursor: pointer;
-}
-
 
 .cafe img{
+
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 20px;
+    left: 20px;
+}
+
+.aranha {
+    width: 332px;
+    height: 500px;
+    border: 10px black solid;
+    background-color: rgb(28, 28, 255);
+}
+
+.aranha img {
+    position: relative;
+    right: 40px;
+    top: 35px;
+    width: 400px;
+    height: 400px;
 }
 
 @keyframes ampliar{
@@ -139,7 +122,6 @@ body{
     100% { transform: rotateY(180deg); }
 }
 
-
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -157,4 +139,131 @@ body{
     opacity: 1;
     transition: 5s;
   }
+}
+
+@media screen and (min-width: 1920px)  {
+    
+   body{
+        display: grid;
+        overflow: auto;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: center;
+        height: 100vh;
+   }
+
+   .inicio {
+        display: inline-block;
+        text-align: center;
+        margin-left: 50px;
+        position: relative;
+        top: 100px;
+       
+    }
+
+    .inicio a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: rgb(255, 129, 129);
+        color: white;
+        font-size: 30px;
+        border-radius: 8px;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s;
+        letter-spacing: 3px;
+        font-family: "Roboto", sans-serif;
+        animation: aparecer infinite 3s ease;
+        border: 1px solid black;
+        margin: 0px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex: 1 1 30%;
+        gap: 100px;
+    }
+
+    .haranha {
+        background-color: red;
+        border-radius: 50%;
+        border: 2px solid black;
+        height: 300px;
+        width: 300px;
+        margin-right: 100px;
+    }
+
+    .haranha:hover {
+        background-image: linear-gradient(rgb(62, 62, 247), rgb(33, 113, 198), rgb(119, 119, 206));
+    }
+
+    .haranha img {
+        position: relative;
+       
+        width: 300px;
+        height: 300px;
+    }
+
+    .haranha img:hover {
+        animation: bounce 3s infinite;
+        cursor: pointer;
+    }
+
+    /* Estilos para .cafe */
+    .cafe {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 3px orange solid;
+        margin-right: 100px;
+    }
+
+    .cafe:hover {
+        animation: flip 4s ease-in-out infinite;
+        cursor: pointer;
+    }
+
+    .cafe img {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Estilos para .aranha */
+    .aranha {
+        background-color: rgb(28, 28, 255);
+        width: 300px;
+        height: 300px;
+        border: 10px black solid;
+        border-radius: 50%;
+        margin: 0px;
+        position: relative;
+        top: 25px;
+        
+    }
+
+    .aranha img {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        top: -50px;
+        right: 12px;
+        
+    }
+
+    .aranha:hover {
+        background-image: linear-gradient(rgb(255, 119, 119), red, rgb(255, 83, 83));
+    }
+
+    .aranha img:hover {
+        animation: ampliar 3s ease;
+        cursor: pointer;
+    }
 }
